@@ -10,3 +10,4 @@ samba:
     - enable: True
     - require:
       - pkg: samba
+      - pkg: avahi
