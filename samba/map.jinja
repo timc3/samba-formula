@@ -9,12 +9,12 @@
     'RedHat': {
         'server': 'samba',
         'client': 'samba',
-        'service': 'smbd',
+        'service': 'smb',
         'config': '/etc/samba/smb.conf',
         'config_src': 'salt://samba/files/smb.conf',
     },
 }, merge=salt['grains.filter_by']({
     'Ubuntu': {
-        'service': 'smbd',
+        'service': 'smb',
     },
 }, grain='os', merge=salt['pillar.get']('samba:lookup'))) %}
